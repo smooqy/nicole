@@ -1,0 +1,14 @@
+# PHP files are for cPanel deploy only; Vercel can't run them
+**/*.php
+
+# Netlify-specific (Vercel doesn't use these)
+netlify/
+netlify.toml
+.netlifyignore
+
+# Local server (Vercel uses serverless functions in api/)
+server.js
+
+# Local secrets
+.env
+.env.local
