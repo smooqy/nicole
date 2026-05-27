@@ -1,0 +1,13 @@
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+
+<FilesMatch "^\.env">
+  Require all denied
+</FilesMatch>
+
+RewriteEngine On
+RewriteRule ^$ pressel/index.html [L]
+RewriteRule ^api/pix/create/?$ api/pix/create.php [L,QSA]
+RewriteRule ^api/pix/([^/]+)/?$ api/pix/status.php?id=$1 [L,QSA]
+RewriteRule ^api/qr/?$ api/qr.php [L,QSA]
+RewriteRule ^api/tiktok/event/?$ api/tiktok/event.php [L,QSA]

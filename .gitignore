@@ -1,0 +1,21 @@
+# Secrets — NEVER commit
+.env
+.env.local
+.env.*.local
+
+# Duplicate / backup folders
+acessebeca.site/
+beca-v2/
+*.zip
+
+# Dependencies / build artifacts
+node_modules/
+.netlify/
+.vercel/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+*.log

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
+  <title>Verificacao de Seguranca</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: #f2f0ea;
+      color: #202124;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: #5f6368;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .google-icon {
+      display: block;
+      width: 28px;
+      height: 28px;
+    }
+
+    .captcha-button {
+      width: 100%;
+      min-height: 82px;
+      border: 1px solid #d6d6d6;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      background: #fff;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+      text-align: left;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .captcha-button:active {
+      transform: translateY(1px);
+    }
+
+    .captcha-button.is-loading {
+      cursor: wait;
+    }
+
+    .checkbox {
+      width: 28px;
+      height: 28px;
+      border: 2px solid #b9b9b9;
+      border-radius: 3px;
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      background: #fafafa;
+    }
+
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #d7d7d7;
+      border-top-color: #4285f4;
+      border-radius: 50%;
+      display: none;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .captcha-button.is-loading .checkbox {
+      border-color: #c7c7c7;
+    }
+
+    .captcha-button.is-loading .spinner {
+      display: block;
+    }
+
+    .label {
+      flex: 1;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    .recaptcha {
+      width: 62px;
+      flex: 0 0 auto;
+      display: grid;
+      justify-items: center;
+      gap: 3px;
+      color: #9e9e9e;
+      font-size: 8px;
+      line-height: 1;
+    }
+
+    .recaptcha .google-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .fineprint {
+      margin: 14px 0 0;
+      color: #8b8b8b;
+      font-size: 10px;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media (max-width: 420px) {
+      body {
+        padding: 18px;
+      }
+
+      .wrap {
+        max-width: 330px;
+      }
+    }
+  </style>
+  <script
+    src="https://cdn.jsdelivr.net/gh/xTracky/static@latest/utm-handler.js"
+    data-token="77d6f00c-54c2-4d8b-b7be-b35fbc72c01a"
+  ></script>
+  <script src="/tiktok-tracking.js"></script>
+</head>
+<body>
+  <main class="wrap" aria-label="Verificacao de seguranca">
+    <div class="brand" aria-hidden="true">
+      <img class="google-icon" src="google-icon-logo-svgrepo-com.svg" alt="">
+      <span>Verificacao de Seguranca</span>
+    </div>
+
+    <button class="captcha-button" type="button" aria-label="Nao sou um robo" onclick="handleCaptchaClick(this)">
+      <span class="checkbox" aria-hidden="true">
+        <span class="spinner"></span>
+      </span>
+      <span class="label">Nao sou um robo</span>
+      <span class="recaptcha" aria-hidden="true">
+        <img class="google-icon" src="google-icon-logo-svgrepo-com.svg" alt="">
+        <span>reCAPTCHA</span>
+        <span>Privacidade - Termos</span>
+      </span>
+    </button>
+
+    <p class="fineprint">Protegido por reCAPTCHA &middot; Privacidade &middot; Termos</p>
+  </main>
+
+  <script>
+    var redirectUrl = window.location.protocol === "file:" ? "../index.html" : "/index.html";
+
+    function handleCaptchaClick(button) {
+      if (button.classList.contains("is-loading")) {
+        return;
+      }
+
+      button.classList.add("is-loading");
+      button.setAttribute("aria-busy", "true");
+      if (window.nicoleTikTok) {
+        window.nicoleTikTok.track("ClickButton", { content_id: "pressel_recaptcha", content_name: "Nao sou um robo", value: 0 }, { server: false });
+      }
+
+      window.setTimeout(function () {
+        window.location.assign(redirectUrl);
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
