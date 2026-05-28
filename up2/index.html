@@ -109,13 +109,19 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     </nav>
 
     <div id="ad1" class="up-enhanced">
+  <div class="up-timer">
+    <div class="up-timer-label"><span class="material-symbols-outlined">hourglass_bottom</span>Essa oferta expira em</div>
+    <div class="up-timer-clock" id="upTimer">04:59</div>
+    <div class="up-timer-bar"><div class="up-timer-fill" id="upTimerBar"></div></div>
+  </div>
+
   <div class="up-hero">
     <video class="up-hero-video" src="/videosup/vd2.mp4" autoplay loop muted playsinline></video>
     <div class="up-hero-live">AO VIVO</div>
-    <div class="up-hero-views">👁 847 assistindo agora</div>
+    <div class="up-hero-views"><span class="material-symbols-outlined">visibility</span>847 assistindo agora</div>
     <div class="up-hero-overlay">
       <div class="up-hero-lock"><span class="material-symbols-outlined">lock</span></div>
-      <div class="up-hero-badge">🔥 Prévia bloqueada</div>
+      <div class="up-hero-badge"><span class="material-symbols-outlined">local_fire_department</span>Prévia bloqueada</div>
     </div>
     <div class="up-hero-frame"></div>
   </div>
@@ -123,26 +129,20 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
   <div class="up-nicole">
     <img class="up-nicole-avatar" src="/perfil.png" alt="Nicole Rodrigues">
     <div style="flex:1">
-      <div class="up-nicole-name">Nicole Rodrigues</div>
+      <div class="up-nicole-name">Nicole Rodrigues <span class="material-symbols-outlined up-verified">verified</span></div>
       <div class="up-nicole-handle">@nicolerodriguesofc</div>
-      <div class="up-nicole-quote">💋 Você passou no Pack — agora vem comigo num nível mais íntimo. 10 minutos AO VIVO, frente a frente, só nós dois numa sala privada. Você manda, eu faço.</div>
+      <div class="up-nicole-quote">Você passou no Pack — agora vem comigo num nível mais íntimo. 10 minutos AO VIVO, frente a frente, só nós dois numa sala privada. Você manda, eu faço.</div>
     </div>
   </div>
 
-  <div class="up-timer">
-    <div class="up-timer-label">⏳ Essa oferta expira em</div>
-    <div class="up-timer-clock" id="upTimer">04:59</div>
-    <div class="up-timer-bar"><div class="up-timer-fill" id="upTimerBar"></div></div>
-  </div>
-
   <div class="up-offer">
-    <div class="up-offer-title">💋 Chamada de Vídeo Privada</div>
+    <div class="up-offer-title"><span class="material-symbols-outlined">videocam</span>Chamada de Vídeo Privada</div>
     <ul class="up-offer-items">
-      <li>10 minutos ao vivo só com você</li>
-      <li>Câmera apontada só pra você, frente a frente</li>
-      <li>Você pede, eu obedeço</li>
-      <li>Sem precisar ligar sua câmera, se preferir</li>
-      <li>Agendamento direto comigo pelo chat</li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>10 minutos ao vivo só com você</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Câmera apontada só pra você, frente a frente</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Você pede, eu obedeço</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Sem precisar ligar sua câmera, se preferir</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Agendamento direto comigo pelo chat</span></li>
     </ul>
 
     <div class="up-price-row">
@@ -153,14 +153,15 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     <div class="up-price-sub">à vista no PIX</div>
 
     <button class="up-cta" onclick="generatePixPayment(event)">
-      <span>💋 Quero a chamada — R$ 12,89</span>
+      <span class="material-symbols-outlined">videocam</span>
+      <span>Quero a chamada — R$ 12,89</span>
       <span class="up-cta-arrow">›</span>
     </button>
 
     <div class="up-trust">
-      <span>🛡️ Garantia 30 dias</span>
-      <span>🔒 PIX seguro</span>
-      <span>⚡ Acesso na hora</span>
+      <span><span class="material-symbols-outlined">verified_user</span>Garantia 30 dias</span>
+      <span><span class="material-symbols-outlined">lock</span>PIX seguro</span>
+      <span><span class="material-symbols-outlined">bolt</span>Acesso na hora</span>
     </div>
 
     <a href="#" class="up-skip" data-next="../up3/index.html">Continuar sem isso, pode ser</a>
