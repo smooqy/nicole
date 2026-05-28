@@ -139,18 +139,35 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     <div style="flex:1">
       <div class="up-nicole-name">Nicole Rodrigues <span class="material-symbols-outlined up-verified">verified</span></div>
       <div class="up-nicole-handle">@nicolerodriguesofc</div>
-      <div class="up-nicole-quote">Aqui eu paro de ser ícone na tela e viro REAL. Você ganha MEU WhatsApp pra falar comigo direto — do mesmo jeito que falo com minhas top assinantes. Pouquíssimas pessoas têm.</div>
+      <div class="up-nicole-quote">Só 47 caras no mundo têm o meu WhatsApp REAL. Não é qualquer um — é uma lista fechada. Hoje eu tô abrindo 3 vagas porque você chegou até aqui. Topa entrar nesse círculo?</div>
     </div>
+  </div>
+
+  <div class="up-chat">
+    <div class="up-chat-head">
+      <img src="/perfil.png" alt="Nicole">
+      <div>
+        <div class="up-chat-head-name">Nicole Rodrigues <span class="material-symbols-outlined">verified</span></div>
+        <div class="up-chat-head-status">online agora</div>
+      </div>
+    </div>
+    <div class="up-chat-body">
+      <div class="up-chat-msg">bom dia amor, dormiu bem?</div>
+      <div class="up-chat-msg media"><span class="material-symbols-outlined">image</span></div>
+      <div class="up-chat-msg">tô com saudade, manda algo seu?</div>
+      <div class="up-chat-typing"><span></span><span></span><span></span></div>
+    </div>
+    <div class="up-chat-footer">Nicole está <strong>digitando agora</strong> · 47 membros na lista</div>
   </div>
 
   <div class="up-offer">
     <div class="up-offer-title"><span class="material-symbols-outlined">smartphone</span>Meu WhatsApp Pessoal</div>
     <ul class="up-offer-items">
-      <li><span class="material-symbols-outlined">check_circle</span><span>Meu número REAL, sem bot intermediando</span></li>
-      <li><span class="material-symbols-outlined">check_circle</span><span>Bom dia + boa noite todo dia, sem falta</span></li>
-      <li><span class="material-symbols-outlined">check_circle</span><span>Áudios safados pra você dormir comigo</span></li>
-      <li><span class="material-symbols-outlined">check_circle</span><span>Fotos que ninguém mais no mundo vê</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Você entra na lista fechada de 47 pessoas</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>MEU número real, não bot, não atendente</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Áudios e fotos exclusivos da lista</span></li>
       <li><span class="material-symbols-outlined">check_circle</span><span>Resposta em até 1h, sempre</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Hoje só 3 vagas abertas pra novos membros</span></li>
     </ul>
 
     <div class="up-price-row">
@@ -162,7 +179,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
 
     <button class="up-cta" onclick="generatePixPayment(event)">
       <span class="material-symbols-outlined">smartphone</span>
-      <span>Quero seu WhatsApp — R$ 17,83</span>
+      <span>Quero entrar na lista — R$ 17,83</span>
       <span class="up-cta-arrow">›</span>
     </button>
 

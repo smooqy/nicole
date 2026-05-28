@@ -139,18 +139,34 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     <div style="flex:1">
       <div class="up-nicole-name">Nicole Rodrigues <span class="material-symbols-outlined up-verified">verified</span></div>
       <div class="up-nicole-handle">@nicolerodriguesofc</div>
-      <div class="up-nicole-quote">Última oferta, amor. Upgrade pra acesso VITALÍCIO + concorre TODO mês ao sorteio de um encontro presencial de 1h comigo. Já mudei a vida de caras com isso ano passado.</div>
+      <div class="up-nicole-quote">Mês passado o Eduardo de SP ganhou nosso encontro presencial — passou 1h ao vivo comigo e me mandou foto chorando depois. Pode ser você esse mês. Faltam só 8 dias pro próximo sorteio.</div>
+    </div>
+  </div>
+
+  <div class="up-winner">
+    <div class="up-winner-head"><span class="material-symbols-outlined">emoji_events</span>Último ganhador do sorteio</div>
+    <div class="up-winner-body">
+      <div class="up-winner-avatar">EM</div>
+      <div>
+        <div class="up-winner-name">Eduardo M.</div>
+        <div class="up-winner-loc">São Paulo · sorteado em outubro</div>
+        <div class="up-winner-quote">"Não acreditava que era ela mesma. Foi a melhor 1h da minha vida — paguei R$ 29,90 e levei o impossível."</div>
+      </div>
+    </div>
+    <div class="up-winner-foot">
+      <span>Próximo sorteio em</span>
+      <span class="up-winner-foot-count">8 dias</span>
     </div>
   </div>
 
   <div class="up-offer">
     <div class="up-offer-title"><span class="material-symbols-outlined">card_giftcard</span>Vitalício + Sorteio de Encontro</div>
     <ul class="up-offer-items">
-      <li><span class="material-symbols-outlined">check_circle</span><span>Acesso vitalício ao meu conteúdo COMPLETO</span></li>
-      <li><span class="material-symbols-outlined">check_circle</span><span>Concorre todo mês ao sorteio mensal</span></li>
-      <li><span class="material-symbols-outlined">check_circle</span><span>Encontro presencial de 1h ao vivo comigo</span></li>
-      <li><span class="material-symbols-outlined">check_circle</span><span>Vencedor escolhido ao vivo, transparente</span></li>
-      <li><span class="material-symbols-outlined">check_circle</span><span>Sem renovação — paga uma vez e pronto</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Acesso vitalício a TODO meu conteúdo, pra sempre</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Concorre TODO mês ao sorteio mensal</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Vencedor passa 1h presencial comigo</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Sorteio transmitido ao vivo, transparente</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Próximo sorteio em 8 dias — sem pagar de novo</span></li>
     </ul>
 
     <div class="up-price-row">
@@ -162,7 +178,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
 
     <button class="up-cta" onclick="generatePixPayment(event)">
       <span class="material-symbols-outlined">card_giftcard</span>
-      <span>Quero o vitalício — R$ 29,90</span>
+      <span>Quero entrar no sorteio — R$ 29,90</span>
       <span class="up-cta-arrow">›</span>
     </button>
 

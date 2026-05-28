@@ -139,18 +139,27 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     <div style="flex:1">
       <div class="up-nicole-name">Nicole Rodrigues <span class="material-symbols-outlined up-verified">verified</span></div>
       <div class="up-nicole-handle">@nicolerodriguesofc</div>
-      <div class="up-nicole-quote">Você passou no Pack — agora vem comigo num nível mais íntimo. 10 minutos AO VIVO, frente a frente, só nós dois numa sala privada. Você manda, eu faço.</div>
+      <div class="up-nicole-quote">Atenção, amor: eu só faço 12 chamadas por semana pra cada uma ser inesquecível. Restam só 3 vagas essa semana — depois é fila de espera de 2 meses. Garante a sua agora?</div>
     </div>
+  </div>
+
+  <div class="up-cal">
+    <div class="up-cal-head"><span class="material-symbols-outlined">calendar_month</span>Próximas vagas dessa semana</div>
+    <div class="up-cal-row"><span class="up-cal-slot">Hoje, 23:30</span><span class="up-cal-status free">Livre</span></div>
+    <div class="up-cal-row"><span class="up-cal-slot">Amanhã, 14:00</span><span class="up-cal-status free">Livre</span></div>
+    <div class="up-cal-row"><span class="up-cal-slot">Amanhã, 21:00</span><span class="up-cal-status busy">Ocupada</span></div>
+    <div class="up-cal-row"><span class="up-cal-slot">Sex, 18:00</span><span class="up-cal-status free">Livre</span></div>
+    <div class="up-cal-footer">Restam 3 vagas — depois é fila de espera</div>
   </div>
 
   <div class="up-offer">
     <div class="up-offer-title"><span class="material-symbols-outlined">videocam</span>Chamada de Vídeo Privada</div>
     <ul class="up-offer-items">
-      <li><span class="material-symbols-outlined">check_circle</span><span>10 minutos ao vivo só com você</span></li>
-      <li><span class="material-symbols-outlined">check_circle</span><span>Câmera apontada só pra você, frente a frente</span></li>
-      <li><span class="material-symbols-outlined">check_circle</span><span>Você pede, eu obedeço</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Vaga garantida no meu calendário ao vivo</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>10 minutos ao vivo, frente a frente, só nós dois</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Você escolhe entre 3 horários disponíveis</span></li>
       <li><span class="material-symbols-outlined">check_circle</span><span>Sem precisar ligar sua câmera, se preferir</span></li>
-      <li><span class="material-symbols-outlined">check_circle</span><span>Agendamento direto comigo pelo chat</span></li>
+      <li><span class="material-symbols-outlined">check_circle</span><span>Restam só 3 vagas essa semana</span></li>
     </ul>
 
     <div class="up-price-row">
@@ -162,7 +171,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
 
     <button class="up-cta" onclick="generatePixPayment(event)">
       <span class="material-symbols-outlined">videocam</span>
-      <span>Quero a chamada — R$ 12,89</span>
+      <span>Garantir minha vaga — R$ 12,89</span>
       <span class="up-cta-arrow">›</span>
     </button>
 
