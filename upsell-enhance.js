@@ -83,4 +83,40 @@
       location.href = link.getAttribute('data-next');
     }
   });
+
+  // === 3-second video preview lock ===
+  document.querySelectorAll('.up-hero').forEach(function (hero) {
+    const video = hero.querySelector('.up-hero-video');
+    const unlock = hero.querySelector('.up-hero-unlock');
+    if (!video || !unlock) return;
+
+    let locked = false;
+    function maybeLock() {
+      if (locked) return;
+      if (video.currentTime >= 3) {
+        locked = true;
+        try { video.pause(); } catch (e) {}
+        unlock.classList.add('is-active');
+        video.removeEventListener('timeupdate', maybeLock);
+      }
+    }
+    video.addEventListener('timeupdate', maybeLock);
+  });
+
+  // === Viewer counter drift (alternating numbers) ===
+  document.querySelectorAll('.up-hero-views .views-num').forEach(function (el) {
+    let current = parseInt((el.dataset.base || el.textContent || '0').replace(/\D/g, ''), 10);
+    if (!current || isNaN(current)) return;
+
+    function render() {
+      el.textContent = current.toLocaleString('pt-BR');
+    }
+    render();
+
+    setInterval(function () {
+      const delta = Math.floor(Math.random() * 7) - 3;
+      current = Math.max(50, current + delta);
+      render();
+    }, 1800 + Math.random() * 1400);
+  });
 })();

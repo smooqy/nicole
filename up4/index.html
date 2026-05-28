@@ -116,14 +116,22 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
   </div>
 
   <div class="up-hero">
-    <video class="up-hero-video" src="/videosup/vd4.mp4" autoplay loop muted playsinline></video>
+    <video class="up-hero-video" src="/videosup/vd4.mp4" autoplay muted playsinline preload="auto"></video>
     <div class="up-hero-live">AO VIVO</div>
-    <div class="up-hero-views"><span class="material-symbols-outlined">visibility</span>412 assistindo agora</div>
+    <div class="up-hero-views"><span class="material-symbols-outlined">visibility</span><span class="views-num" data-base="412">412</span>&nbsp;assistindo</div>
     <div class="up-hero-overlay">
       <div class="up-hero-lock"><span class="material-symbols-outlined">lock</span></div>
       <div class="up-hero-badge"><span class="material-symbols-outlined">local_fire_department</span>Prévia bloqueada</div>
     </div>
     <div class="up-hero-frame"></div>
+    <div class="up-hero-unlock">
+      <div class="up-hero-unlock-icon"><span class="material-symbols-outlined">lock</span></div>
+      <div class="up-hero-unlock-hint">Quer ver o vídeo completo?</div>
+      <button class="up-hero-unlock-btn" type="button" onclick="generatePixPayment(event)">
+        <span class="material-symbols-outlined">lock_open</span>
+        Desbloquear prévia
+      </button>
+    </div>
   </div>
 
   <div class="up-nicole">

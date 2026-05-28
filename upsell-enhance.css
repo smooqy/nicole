@@ -1,5 +1,5 @@
 /* Hero blurred video preview */
-.up-hero{position:relative;width:calc(100% - 24px);margin:12px auto 0;border-radius:14px;overflow:hidden;background:#000;aspect-ratio:9/16;max-width:380px}
+.up-hero{position:relative;width:calc(100% - 24px);margin:10px auto 0;border-radius:14px;overflow:hidden;background:#000;height:260px;max-width:380px}
 .up-hero-video{width:100%;height:100%;object-fit:cover;filter:blur(6px) brightness(.95) saturate(1.05);transform:scale(1.06);display:block}
 .up-hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:18px;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 0%,rgba(0,0,0,.15) 55%,rgba(0,0,0,.45) 100%);pointer-events:none}
 .up-hero-lock{width:72px;height:72px;border-radius:50%;background:rgba(255,107,61,.96);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 28px rgba(255,107,61,.55);animation:lockPulse 1.8s ease-in-out infinite}
@@ -11,10 +11,20 @@
 .up-hero-live{position:absolute;top:10px;left:10px;background:#ef4444;color:#fff;font-size:10px;font-weight:900;padding:4px 8px;border-radius:6px;display:flex;align-items:center;gap:4px;letter-spacing:.5px}
 .up-hero-live::before{content:'';width:6px;height:6px;background:#fff;border-radius:50%;animation:liveBlink 1s ease-in-out infinite}
 @keyframes liveBlink{50%{opacity:.3}}
-.up-hero-views{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.7);color:#fff;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;display:flex;align-items:center;gap:4px}
+.up-hero-views{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.7);color:#fff;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;display:flex;align-items:center;gap:4px;font-variant-numeric:tabular-nums}
 .up-hero-views .material-symbols-outlined{font-size:14px}
 .up-hero-badge{display:inline-flex;align-items:center;gap:5px}
 .up-hero-badge .material-symbols-outlined{font-size:14px}
+
+/* Unlock overlay (appears after 3s preview) */
+.up-hero-unlock{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:5;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s ease}
+.up-hero-unlock.is-active{opacity:1;visibility:visible}
+.up-hero-unlock-icon{width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
+.up-hero-unlock-icon .material-symbols-outlined{color:#fff;font-size:34px}
+.up-hero-unlock-btn{background:linear-gradient(135deg,#ff6b3d,#ff9162);color:#fff;border:0;border-radius:12px;padding:14px 22px;font-size:14px;font-weight:900;letter-spacing:.8px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;box-shadow:0 12px 30px rgba(255,107,61,.55);text-transform:uppercase;font-family:inherit;animation:unlockPulse 1.8s ease-in-out infinite alternate}
+@keyframes unlockPulse{from{transform:scale(1)}to{transform:scale(1.04);box-shadow:0 16px 38px rgba(255,107,61,.78),0 0 0 6px rgba(255,107,61,.18)}}
+.up-hero-unlock-btn .material-symbols-outlined{font-size:20px}
+.up-hero-unlock-hint{color:rgba(255,255,255,.85);font-size:11px;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,.6);letter-spacing:.3px}
 
 /* Nicole message card */
 .up-nicole{display:flex;gap:11px;padding:12px;margin:14px 12px 0;background:linear-gradient(135deg,#fff8f5,#fffaf7);border:1px solid #ffd5c1;border-radius:13px;align-items:flex-start;box-shadow:0 2px 8px rgba(255,107,61,.06)}
@@ -25,12 +35,12 @@
 .up-nicole-quote{font-size:13px;color:#3a3a3a;line-height:1.45;margin-top:5px;font-weight:500}
 
 /* Timer */
-.up-timer{margin:12px 12px 0;padding:11px 14px;background:linear-gradient(135deg,#fff7ed,#fff1f2);border:1px solid #fed7aa;border-radius:11px;text-align:center}
-.up-timer-label{font-size:10px;color:#9a3412;text-transform:uppercase;letter-spacing:.7px;font-weight:800;display:inline-flex;align-items:center;gap:5px;justify-content:center}
+.up-timer{margin:8px 14px 0;padding:0;background:none;border:0;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.up-timer-label{font-size:11px;color:#9a3412;text-transform:uppercase;letter-spacing:.6px;font-weight:800;display:inline-flex;align-items:center;gap:5px;justify-content:center}
 .up-timer-label .material-symbols-outlined{font-size:14px}
-.up-timer-clock{font-size:28px;font-weight:900;color:#b91c1c;letter-spacing:1.5px;font-variant-numeric:tabular-nums;margin:1px 0 4px}
-.up-timer-bar{height:5px;background:#fee2e2;border-radius:999px;overflow:hidden}
-.up-timer-fill{height:100%;background:linear-gradient(90deg,#ef4444,#f97316);width:100%;transition:width 1s linear;border-radius:999px}
+.up-timer-clock{font-size:16px;font-weight:900;color:#b91c1c;letter-spacing:.8px;font-variant-numeric:tabular-nums;line-height:1}
+.up-timer-bar{display:none}
+.up-timer-fill{display:none}
 
 /* Offer box */
 .up-offer{margin:14px 12px 20px;padding:18px;background:#fff;border:1px solid #f3f4f6;border-radius:14px;box-shadow:0 4px 14px rgba(0,0,0,.05)}
