@@ -26,6 +26,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="/upsell-enhance.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .hidden { display: none !important; }
@@ -107,58 +108,65 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
         </div>
     </nav>
 
-    <div id="ad1">
-        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Pack de Estreia VIP</p>
+    <div id="ad1" class="up-enhanced">
+  <div class="up-hero">
+    <video class="up-hero-video" src="/videosup/vd1.mp4" autoplay loop muted playsinline></video>
+    <div class="up-hero-live">AO VIVO</div>
+    <div class="up-hero-views">👁 1.247 assistindo agora</div>
+    <div class="up-hero-overlay">
+      <div class="up-hero-lock"><span class="material-symbols-outlined">lock</span></div>
+      <div class="up-hero-badge">🔥 Prévia bloqueada</div>
+    </div>
+    <div class="up-hero-frame"></div>
+  </div>
 
-        <div class="ad1">
-            <div style="margin-left: 3%; margin-right: 3%;">
-                <button class="styled-button">
-                    <div class="icon-container" style="background-color: #f4f4f4; padding: 10px; border-radius: 50%;"> <!-- Mudança feita aqui -->
-                        <span class="material-symbols-outlined" style="font-size: 42px; color: #ff6b3d;">lock_open</span>
-                    </div>
-                    <span class="button-text">
-                        <span class="button-title">Conta Privacy: #5972</span>
-                    </span>
-                </button>
+  <div class="up-nicole">
+    <img class="up-nicole-avatar" src="/perfil.png" alt="Nicole Rodrigues">
+    <div style="flex:1">
+      <div class="up-nicole-name">Nicole Rodrigues</div>
+      <div class="up-nicole-handle">@nicolerodriguesofc</div>
+      <div class="up-nicole-quote">🔥 Amor, antes de você sair daqui, eu separei 12 vídeos meus que NÃO ESTÃO no Privacy. Pack só pra quem entrou hoje — desbloqueia agora e cai tudo no seu acesso na hora.</div>
+    </div>
+  </div>
 
-                <div class="entrega-container">
-                    <div class="entrega-header">
-                        Status
-                    </div>
-                    <div class="entrega-content">
-                        <div class="icon-container2">
-                            <span class="material-symbols-outlined">check</span>
-                        </div>
-                        <div class="text-container">
-                            <div class="entrega-title">Acesso VIP confirmado ✓</div>
-                        </div>
-                    </div>
-                    <div class="entrega-content">
-                        <div class="icon-container3">
-                            <span class="material-symbols-outlined">warning</span>
-                        </div>
-                        <div class="text-container">
-                            <div class="entrega-title">Pack de Estreia disponível por tempo limitado 🔥</div>
-                        </div>
-                    </div>
-                </div>
+  <div class="up-timer">
+    <div class="up-timer-label">⏳ Essa oferta expira em</div>
+    <div class="up-timer-clock" id="upTimer">04:59</div>
+    <div class="up-timer-bar"><div class="up-timer-fill" id="upTimerBar"></div></div>
+  </div>
 
-                <p class="security-note" style="text-align: center; margin-left: 3%; margin-right: 3%;">🔥 Amor, antes de você sair daqui, eu separei 12 vídeos meus que NÃO ESTÃO no Privacy. Pack só pra quem entrou hoje — desbloqueia agora e cai tudo no seu acesso na hora.</p>
-                <div style="text-align: center;"><span class="security-price"><small>Valor único</small><strong>R$ 9,90</strong></span></div>
+  <div class="up-offer">
+    <div class="up-offer-title">🔓 Pack de Estreia VIP</div>
+    <ul class="up-offer-items">
+      <li>12 vídeos exclusivos meus em alta definição</li>
+      <li>Conteúdo que NÃO está no Privacy</li>
+      <li>Pode baixar e ver offline, sem internet</li>
+      <li>Sem marca d'água, qualidade real</li>
+      <li>Acesso imediato após confirmação</li>
+    </ul>
 
-                <div class="button-container" style="padding-bottom: 20px;">
-                    <button class="styled-button2" onclick="generatePixPayment(event)">
-                        <span class="button-text">
-                            <span class="button-title2">🔓 Quero o Pack agora</span>
-                        </span>
-                        <span class="material-symbols-outlined" style="font-size: 32px;">arrow_forward_ios</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+    <div class="up-price-row">
+      <span class="up-old-price">DE <s>R$ 49,90</s></span>
+      <span class="up-discount">-83% OFF</span>
+    </div>
+    <div class="up-new-price">POR <strong>R$ 8,40</strong></div>
+    <div class="up-price-sub">à vista no PIX</div>
+
+    <button class="up-cta" onclick="generatePixPayment(event)">
+      <span>🔓 Quero o Pack agora — R$ 8,40</span>
+      <span class="up-cta-arrow">›</span>
+    </button>
+
+    <div class="up-trust">
+      <span>🛡️ Garantia 30 dias</span>
+      <span>🔒 PIX seguro</span>
+      <span>⚡ Acesso na hora</span>
     </div>
 
-    <div id="ad2" style="display: none;">
+    <a href="#" class="up-skip" data-next="../up2/index.html">Continuar sem isso, pode ser</a>
+  </div>
+</div>
+<div id="ad2" style="display: none;">
         <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Pack de Estreia VIP</p>
 
         <div class="ad2" style="padding-top: 15px; padding-bottom: 15px;">
@@ -204,7 +212,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                         <span class="material-symbols-outlined" style="color: #d40303;">priority_high</span>
                     </div>
                     <div class="text-container">
-                        <div class="entrega-title" style="color: white">💋 Última chance de pegar esse pack, amor. 12 vídeos exclusivos que só os primeiros vão ver — só R$ 9,90.</div>
+                        <div class="entrega-title" style="color: white">💋 Última chance de pegar esse pack, amor. 12 vídeos exclusivos que só os primeiros vão ver — só R$ 8,40.</div>
                     </div>
                 </div>
             </div>
@@ -212,7 +220,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
             <div id="finalButton" class="button-container hidden" style="padding-top: 15px;">
                 <button onclick="generatePixPayment(event)" class="styled-button2">
                     <span class="button-text">
-                            <span class="button-title2">🔓 Liberar Pack por R$ 9,90</span>
+                            <span class="button-title2">🔓 Liberar Pack por R$ 8,40</span>
                     </span>
                     <span class="material-symbols-outlined" style="font-size: 32px;">arrow_forward_ios</span>
                 </button>
@@ -231,6 +239,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
 
     <script src="js/scripts.js"></script>
     <script src="/tiktok-tracking.js"></script>
+    <script defer src="/upsell-enhance.js"></script>
 
     <script>
         document.body.dataset.step = "pack_estreia";
@@ -375,7 +384,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
 
                 // Dados para o PIX da Pack de Estreia (formato NivusPay)
                 const pixData = {
-                    "amount": 9.90, // R$ 9,90
+                    "amount": 8.40, // R$ 8,40
                     "description": "Pack de Estreia VIP",
                     "paymentMethod": "pix",
                     "customer": {
@@ -391,7 +400,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                         {
                             "title": "Pack de Estreia VIP",
                             "quantity": 1,
-                            "unitPrice": 990, // R$ 9,90 em centavos
+                            "unitPrice": 840, // R$ 8,40 em centavos
                             "tangible": false,
                             "externalRef": "pack_estreia"
                         }
@@ -403,7 +412,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                 console.log("📦 Dados preparados para Pack de Estreia:", pixData);
 
                 if (window.nicoleTikTok) {
-                    window.nicoleTikTok.trackCheckout({ content_id: "pack_estreia", content_name: "Pack de Estreia VIP", value: 9.9, order_id: pixData.external_id, event_id: "InitiateCheckout_" + pixData.external_id, customer: clientData });
+                    window.nicoleTikTok.trackCheckout({ content_id: "pack_estreia", content_name: "Pack de Estreia VIP", value: 8.4, order_id: pixData.external_id, event_id: "InitiateCheckout_" + pixData.external_id, customer: clientData });
                 }
 
                 const result = await postPixCreate(pixData);
@@ -423,7 +432,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                         qr_code_url: pixCode,
                         image: pixCode,
                         status: result.status || "waiting_payment",
-                        amount: result.amount || 9.90,
+                        amount: result.amount || 8.40,
                         due_date: normalizedPix.expiresAt || new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().split('T')[0],
                         secure_url: result.secureUrl,
                         secure_id: result.secureId,
@@ -434,7 +443,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     localStorage.setItem("nivuspay_transaction_id_pack_estreia", transactionId);
 
                     if (window.nicoleTikTok) {
-                        window.nicoleTikTok.trackPixGenerated({ content_id: "pack_estreia", content_name: "Pack de Estreia VIP", value: 9.9, order_id: transactionId, event_id: "AddPaymentInfo_" + transactionId, customer: clientData });
+                        window.nicoleTikTok.trackPixGenerated({ content_id: "pack_estreia", content_name: "Pack de Estreia VIP", value: 8.4, order_id: transactionId, event_id: "AddPaymentInfo_" + transactionId, customer: clientData });
                     }
 
                     showPixModal(payment);
@@ -464,7 +473,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                     <div style="background:linear-gradient(135deg,#ff633d,#ff875e);color:#fff;text-align:center;padding:24px 22px 18px;">
                         <h2 style="font-size:20px;line-height:1.2;margin:0 0 6px;font-weight:800;color:#fff;">Escaneie o QR Code</h2>
                         <p style="font-size:15px;margin:0 0 9px;color:#fff;">Ou copie o código PIX abaixo</p>
-                        <div style="display:inline-flex;align-items:center;justify-content:center;min-height:26px;padding:4px 14px;border-radius:999px;background:rgba(255,255,255,.24);font-size:14px;font-weight:800;color:#fff;">Pack de Estreia VIP - R$ ${payment.amount ? payment.amount.toFixed(2).replace('.', ',') : '9,90'}</div>
+                        <div style="display:inline-flex;align-items:center;justify-content:center;min-height:26px;padding:4px 14px;border-radius:999px;background:rgba(255,255,255,.24);font-size:14px;font-weight:800;color:#fff;">Pack de Estreia VIP - R$ ${payment.amount ? payment.amount.toFixed(2).replace('.', ',') : '8,40'}</div>
                     </div>
                     <div style="padding:21px 20px 22px;">
                         <div id="qr-code-container" style="display:flex;justify-content:center;margin-bottom:13px;">
@@ -495,7 +504,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                 tracking: {
                     content_id: "pack_estreia",
                     content_name: "Pack de Estreia VIP",
-                    value: 9.9,
+                    value: 8.4,
                     order_id: payment.payment_code,
                     event_id: "CompletePayment_" + payment.payment_code,
                 },
@@ -741,7 +750,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
                         const paidPix = JSON.parse(localStorage.getItem("currentPixPackEstreia") || "{}");
                         paidCustomer = (paidPix && paidPix.payment && paidPix.payment.customer) || {};
                     } catch (error) {}
-                    window.nicoleTikTok.trackPaymentConfirmed({ content_id: "pack_estreia", content_name: "Pack de Estreia VIP", value: 9.9, order_id: nivuspayId, event_id: paidEventId, customer: paidCustomer });
+                    window.nicoleTikTok.trackPaymentConfirmed({ content_id: "pack_estreia", content_name: "Pack de Estreia VIP", value: 8.4, order_id: nivuspayId, event_id: paidEventId, customer: paidCustomer });
                 }
                 
                 // Redirecionar para up2 pm

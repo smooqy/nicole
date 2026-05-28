@@ -26,6 +26,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="/upsell-enhance.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .hidden { display: none !important; }
@@ -107,58 +108,65 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
         </div>
     </nav>
 
-    <div id="ad1">
-        <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Vitalício + Sorteio Mensal</p>
+    <div id="ad1" class="up-enhanced">
+  <div class="up-hero">
+    <video class="up-hero-video" src="/videosup/vd4.mp4" autoplay loop muted playsinline></video>
+    <div class="up-hero-live">AO VIVO</div>
+    <div class="up-hero-views">👁 412 assistindo agora</div>
+    <div class="up-hero-overlay">
+      <div class="up-hero-lock"><span class="material-symbols-outlined">lock</span></div>
+      <div class="up-hero-badge">🔥 Prévia bloqueada</div>
+    </div>
+    <div class="up-hero-frame"></div>
+  </div>
 
-        <div class="ad1">
-            <div style="margin-left: 3%; margin-right: 3%;">
-                <button class="styled-button">
-                    <div class="icon-container" style="background-color: #f4f4f4; padding: 10px; border-radius: 50%;"> <!-- Mudança feita aqui -->
-                        <span class="material-symbols-outlined" style="font-size: 42px; color: #f59e0b;">card_giftcard</span>
-                    </div>
-                    <span class="button-text">
-                        <span class="button-title">Conta Privacy: #5972</span>
-                    </span>
-                </button>
+  <div class="up-nicole">
+    <img class="up-nicole-avatar" src="/perfil.png" alt="Nicole Rodrigues">
+    <div style="flex:1">
+      <div class="up-nicole-name">Nicole Rodrigues</div>
+      <div class="up-nicole-handle">@nicolerodriguesofc</div>
+      <div class="up-nicole-quote">💎 Última oferta, amor. Upgrade pra acesso VITALÍCIO + concorre TODO mês ao sorteio de um encontro presencial de 1h comigo. Já mudei a vida de caras com isso ano passado.</div>
+    </div>
+  </div>
 
-                <div class="entrega-container">
-                    <div class="entrega-header">
-                        Status
-                    </div>
-                    <div class="entrega-content">
-                        <div class="icon-container2">
-                            <span class="material-symbols-outlined">check</span>
-                        </div>
-                        <div class="text-container">
-                            <div class="entrega-title">WhatsApp pessoal desbloqueado ✓</div>
-                        </div>
-                    </div>
-                    <div class="entrega-content">
-                        <div class="icon-container3">
-                            <span class="material-symbols-outlined">warning</span>
-                        </div>
-                        <div class="text-container">
-                            <div class="entrega-title">Vitalício + Sorteio aguardando 🎁</div>
-                        </div>
-                    </div>
-                </div>
+  <div class="up-timer">
+    <div class="up-timer-label">⏳ Essa oferta expira em</div>
+    <div class="up-timer-clock" id="upTimer">04:59</div>
+    <div class="up-timer-bar"><div class="up-timer-fill" id="upTimerBar"></div></div>
+  </div>
 
-                <p class="security-note" style="text-align: center; margin-left: 3%; margin-right: 3%;">💎 Última oferta, amor. Upgrade pra acesso VITALÍCIO + concorre TODO mês a um sorteio de encontro presencial de 1h comigo. Só liberado pra quem chegou até aqui.</p>
-                <div style="text-align: center;"><span class="security-price"><small>Valor único</small><strong>R$ 29,90</strong></span></div>
+  <div class="up-offer">
+    <div class="up-offer-title">🎁 Vitalício + Sorteio de Encontro</div>
+    <ul class="up-offer-items">
+      <li>Acesso vitalício ao meu conteúdo COMPLETO</li>
+      <li>Concorre todo mês ao sorteio mensal</li>
+      <li>Encontro presencial de 1h ao vivo comigo</li>
+      <li>Vencedor escolhido ao vivo, transparente</li>
+      <li>Sem renovação — paga uma vez e pronto</li>
+    </ul>
 
-                <div class="button-container" style="padding-bottom: 20px;">
-                    <button class="styled-button2" onclick="generatePixPayment(event)">
-                        <span class="button-text">
-                            <span class="button-title2">🎁 Quero o vitalício</span>
-                        </span>
-                        <span class="material-symbols-outlined" style="font-size: 32px;">arrow_forward_ios</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+    <div class="up-price-row">
+      <span class="up-old-price">DE <s>R$ 197,00</s></span>
+      <span class="up-discount">-85% OFF</span>
+    </div>
+    <div class="up-new-price">POR <strong>R$ 29,90</strong></div>
+    <div class="up-price-sub">à vista no PIX</div>
+
+    <button class="up-cta" onclick="generatePixPayment(event)">
+      <span>🎁 Quero o vitalício — R$ 29,90</span>
+      <span class="up-cta-arrow">›</span>
+    </button>
+
+    <div class="up-trust">
+      <span>🛡️ Garantia 30 dias</span>
+      <span>🔒 PIX seguro</span>
+      <span>⚡ Acesso na hora</span>
     </div>
 
-    <div id="ad2" style="display: none;">
+    <a href="#" class="up-skip" data-next="../up5/index.html">Continuar sem isso, pode ser</a>
+  </div>
+</div>
+<div id="ad2" style="display: none;">
         <p class="security-page-title" style="margin-left: 5%; font-size: 22px;">Vitalício + Sorteio Mensal</p>
 
         <div class="ad2" style="padding-top: 15px; padding-bottom: 15px;">
@@ -231,6 +239,7 @@ if (!isset($_SESSION["sessionToken"]) || $_SESSION["sessionToken"] !== $sessionT
 
     <script src="js/scripts.js"></script>
     <script src="/tiktok-tracking.js"></script>
+    <script defer src="/upsell-enhance.js"></script>
 
     <script>
         document.body.dataset.step = "vitalicio_sorteio";

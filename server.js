@@ -285,19 +285,26 @@ async function serveStatic(req, res) {
   }
 
   try {
-    const stat = await fsp.stat(filePath);
+    let stat = await fsp.stat(filePath);
+    let finalPath = filePath;
     if (stat.isDirectory()) {
-      sendJson(res, 404, { message: "Not found" });
-      return;
+      const indexPath = path.join(filePath, "index.html");
+      try {
+        stat = await fsp.stat(indexPath);
+        finalPath = indexPath;
+      } catch {
+        sendJson(res, 404, { message: "Not found" });
+        return;
+      }
     }
 
     res.writeHead(200, {
       "Content-Type":
-        CONTENT_TYPES[path.extname(filePath).toLowerCase()] ||
+        CONTENT_TYPES[path.extname(finalPath).toLowerCase()] ||
         "application/octet-stream",
       "Content-Length": stat.size,
     });
-    fs.createReadStream(filePath).pipe(res);
+    fs.createReadStream(finalPath).pipe(res);
   } catch {
     sendJson(res, 404, { message: "Not found" });
   }
